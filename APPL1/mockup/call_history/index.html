@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal Mock Up</title>
+</head>
+<body>
+    <style>
+        body{background-color: rgb(83, 66, 66); margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+        a{text-decoration: none;}
+        #container_wrapper{display: block; position: relative; background-color: white; width: 360px; height: 640px; margin: 0; padding: 0;}
+        /* main page */
+        #home_page{display: block; width: 360px; height: 640px; margin: 0; padding: 0;}
+        .header{width: 100%; height: 60px; float: left;}
+        .header h1{float: left; margin: 13px; margin-left: 10px; text-align: left; font-size: 30px; font-weight: bold;}
+        .right_bottom_container{position: absolute; right: 10px; bottom: 30px; width: 70px; height: 120px;}
+        .right_bottom_container img{width: 50px; height: 50px; margin: 5px; border-radius: 50px; box-shadow: 5px 5px 5px grey;}
+        .dot_menu{display: none;}
+        .dot_menu ul{position: absolute; right: 15px; top: 50px; padding: 0; width: 120px; box-shadow: 0px 0px 7px 0px grey;}
+        .dot_menu li{position: relative; list-style: none; padding: 10px; font-size: 15px; color: black;}
+        .dot_menu li:hover{background: #2c6bed; color: white;}
+        /* history call page */
+        #history_page{display: none; width: 360px; height: 640px; margin: 0; padding: 0;}
+        .history_container{width: 100%; height: 560px; margin: 0; margin-top: 60px;}
+        .history_container li{height: 50px; padding: 10px; list-style: none; color: black; border-bottom:1px solid #ccc;}
+        .history_container li img{width: 50px; height: 50px; float: left;}
+        .history_container li h1{font-size: 18px; font-weight: bold; color: black; margin: 0; padding: 0; margin-right: 100px;}
+        .history_container li h2{font-size: 15px; font-weight: normal; color: rgb(156, 156, 156); margin: 0; padding: 0; float: left;}
+        .history_container li:hover{background: rgb(235, 235, 235);}
+        .info_call{margin-top: 6px; margin-left: 10px; float: left; width: 200px;}
+    </style>
+
+
+    <div id="container_wrapper">
+        <div id="home_page">
+            <div class="header">
+                <img src="img/nauval.jpg" alt="" style="float: left; width: 35px; height: 35px; margin:12px; border-radius: 50px;">
+                <h1>Signal</h1>
+                <a onclick="dot_menu()" href="#"><img src="img/menu.png" alt="" style="float: right; width: 25px; height: 30px; margin-right: 10px; margin-top: 15px;"></a>
+                <img src="img/search.png" alt="" style="float: right; width: 25px; height: 25px; margin-right: 10px; margin-top: 18px">
+            </div>
+            <div class="dot_menu">
+                <ul>
+                    <a onclick="" href="#"><li>New group</li></a>
+                    <a onclick="" href="#"><li>Mark all read</li></a>
+                    <a onclick="history_page()" href="#"><li>Call history</li></a>
+                    <a onclick="" href="#"><li>Invite Friends</li></a>
+                    <a onclick="" href="#"><li>Settings</li></a>
+                </ul>
+            </div>
+            <div class="right_bottom_container">
+                <img src="img/camera.png" alt="" style="width: 53px; height: 53px;">
+                <img src="img/new-text.png" alt="" style="margin-left: 6px;">
+            </div>
+        </div>
+
+        <div id="history_page">
+            <!-- <div class="header" style="background: #2c6bed;"> -->
+            <div class="header">
+                <!-- <a onclick="back_home()" href=""><img src="img/back.png" alt="" style="float: left; width: 16px; height: 25px; margin-top: 17px; margin-left: 10px;"></a> -->
+                <a onclick="back_home()" href=""><img src="img/back_blue.png" alt="" style="float: left; width: 25px; height: 25px; margin:17px; margin-right: 16px;"></a>
+                <!-- <h1 style="color: white; float: left;">Call History</h1> -->
+                <h1 style="color: black; float: left;">Call History</h1>
+                <div class="history_container">
+                    <a onclick="" href="#"><li>
+                        <img src="img/fadillah.jpg" alt="" style="border-radius: 50px; ">
+                        <div class="info_call">
+                            <h1>F</h1> <br>
+                            <h2>08.30, 9 April 2021</h2>
+                        </div>
+                        <img src="img/callin.png" alt="" style="float: right;">
+                    </li></a>
+                    <a onclick="" href="#"><li>
+                        <img src="img/rafi.jpg" alt="" style="border-radius: 50px; ">
+                        <div class="info_call">
+                            <h1>Rafi</h1> <br>
+                            <h2>10.10, 9 April 2021</h2>
+                        </div>
+                        <img src="img/callout.png" alt="" style="float: right">
+                    </li></a>
+                    <a onclick="" href="#"><li>
+                        <img src="img/hasbi.jpg" alt="" style="border-radius: 50px; ">
+                        <div class="info_call">
+                            <h1>Hasbi</h1> <br>
+                            <h2>12.00, 9 April 2021</h2>
+                        </div>
+                        <img src="img/failcall.png" alt="" style="float: right">
+                    </li></a>
+                    <a onclick="" href="#"><li>
+                        <img src="img/irsyad.jpg" alt="" style="border-radius: 50px; ">
+                        <div class="info_call">
+                            <h1>Irsyad</h1> <br>
+                            <h2>15.20, 9 April 2021</h2>
+                        </div>
+                        <img src="img/callin.png" alt="" style="float: right">
+                    </li></a>
+                    <a onclick="" href="#"><li>
+                        <img src="img/gemintang.jpg" alt="" style="border-radius: 50px; ">
+                        <div class="info_call">
+                            <h1>Gemintang</h1> <br>
+                            <h2>17.17, 9 April 2021</h2>
+                        </div>
+                        <img src="img/failcall.png" alt="" style="float: right">
+                    </li></a>
+                    <a onclick="" href="#"> <li>
+                        <img src="img/nauval.jpg" alt="" style="border-radius: 50px; ">
+                        <div class="info_call">
+                            <h1>nauvallllllllleeeeeeeeee...</h1><br>
+                            <h2>17.17, 9 April 2021</h2>
+                        </div>
+                        <img src="img/failcall.png" alt="" style="float: right">
+                    </li></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function dot_menu() {
+            var x = document.getElementsByClassName("dot_menu")[0];
+            if(x.style.display == "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function history_page() {
+            var x = document.getElementById("home_page");
+            x.style.display = "none";
+            document.getElementById("history_page").style.display = "block";
+        }
+
+        function back_home() {
+            var x = document.getElementById("history_page");
+            x.style.display = "none";
+            document.getElementById("home_page").style.display = "block";
+        }
+    </script>
+</body>
+</html>
