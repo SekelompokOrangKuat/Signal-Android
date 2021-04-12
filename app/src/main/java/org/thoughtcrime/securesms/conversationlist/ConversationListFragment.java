@@ -317,6 +317,7 @@ public class ConversationListFragment extends MainFragment implements ActionMode
       case R.id.menu_clear_passphrase:  handleClearPassphrase(); return true;
       case R.id.menu_mark_all_read:     handleMarkAllRead();     return true;
       case R.id.menu_invite:            handleInvite();          return true;
+      case R.id.menu_call_history:      handleCallHistory();     return true;
       case R.id.menu_insights:          handleInsights();        return true;
     }
 
@@ -698,6 +699,10 @@ public class ConversationListFragment extends MainFragment implements ActionMode
 
   private void handleInvite() {
     getNavigator().goToInvite();
+  }
+
+  private void handleCallHistory() {
+    getNavigator().goToCallHistory();
   }
 
   private void handleInsights() {

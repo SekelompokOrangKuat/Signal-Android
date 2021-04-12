@@ -94,6 +94,11 @@ public class MainNavigator {
     InsightsLauncher.showInsightsDashboard(activity.getSupportFragmentManager());
   }
 
+  public void goToCallHistory() {
+    Intent intent = new Intent(activity, CallHistory.class);
+    activity.startActivity(intent);
+  }
+
   private @NonNull FragmentManager getFragmentManager() {
     return activity.getSupportFragmentManager();
   }
